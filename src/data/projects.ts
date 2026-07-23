@@ -1,34 +1,63 @@
 import type { Project } from "@/types/project";
 
-export const projects: Project[] = [
+const projects: Project[] = [
   {
     id: 1,
-    title: "Sistema de inventario",
+    title: "Sistema de Inventario",
+
     description:
-      "Aplicación orientada al control de productos, movimientos de stock y gestión de inventario para pequeñas empresas.",
-    technologies: ["React", "TypeScript", "Laravel", "PostgreSQL"],
+      "Aplicación para controlar inventario, entradas, salidas y stock de productos.",
+
+    technologies: [
+      "Laravel",
+      "MySQL",
+      "Bootstrap",
+      "PHP"
+    ],
+
     repositoryUrl:
       "https://github.com/silvajorgefigueroatrabajo",
+
     featured: true,
   },
+
   {
     id: 2,
-    title: "Sistema de soporte TI",
+    title: "Sistema de Soporte TI",
+
     description:
-      "Plataforma para registrar, asignar y hacer seguimiento de solicitudes de soporte técnico.",
-    technologies: ["React", "TypeScript", "REST API", "SQL"],
+      "Gestión de tickets de soporte con seguimiento de incidencias.",
+
+    technologies: [
+      "Laravel",
+      "SQL Server",
+      "Bootstrap"
+    ],
+
     repositoryUrl:
       "https://github.com/silvajorgefigueroatrabajo",
+
     featured: true,
   },
+
   {
     id: 3,
-    title: "API de gestión",
+    title: "API de Gestión",
+
     description:
-      "API REST para administrar usuarios, roles y recursos mediante una arquitectura organizada y escalable.",
-    technologies: ["Laravel", "PHP", "PostgreSQL", "Docker"],
+      "API REST para administración de recursos utilizando arquitectura MVC.",
+
+    technologies: [
+      "Laravel",
+      "REST",
+      "MySQL"
+    ],
+
     repositoryUrl:
       "https://github.com/silvajorgefigueroatrabajo",
-    featured: true,
+
+    featured: false,
   },
 ];
+
+export default projects;

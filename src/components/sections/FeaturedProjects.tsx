@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import Container from "@/components/ui/Container";
 import ProjectCard from "@/components/ui/ProjectCard";
-import { projects } from "@/data/projects";
+import projects from "@/data/projects";
 
 export default function FeaturedProjects() {
   const featuredProjects = projects.filter(
