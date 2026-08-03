@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-
 import MainLayout from "@/components/layout/MainLayout";
 import Container from "@/components/ui/Container";
 import experience from "@/data/experience";
@@ -8,97 +6,27 @@ import skillGroups from "@/data/skills";
 export default function AboutPage() {
   return (
     <MainLayout>
-      <section className="pt-32 pb-24 sm:pt-40 sm:pb-32">
-        <Container>
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-3xl"
-          >
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-400">
-              Perfil profesional
-            </p>
-
-            <h1 className="mt-4 text-4xl font-semibold tracking-tight text-zinc-100 sm:text-6xl">
-              Desarrollo software y resuelvo problemas tecnológicos.
-            </h1>
-
-            <div className="mt-8 space-y-5 text-lg leading-8 text-zinc-400">
-              <p>
-                Soy Jorge Silva, Ingeniero en Informática titulado de INACAP,
-                con experiencia en desarrollo Full Stack y soporte TI.
-              </p>
-
-              <p>
-                He trabajado desarrollando aplicaciones web con Laravel, PHP y
-                bases de datos SQL. Actualmente trabajo en soporte tecnológico
-                en Abastible, donde resuelvo incidencias y apoyo la continuidad
-                operativa de los usuarios.
-              </p>
-
-              <p>
-                Mi objetivo es seguir creciendo como desarrollador, construir
-                soluciones útiles y aplicar la tecnología para mejorar procesos
-                reales.
-              </p>
-            </div>
-          </motion.div>
+      <section className="paper-grid pt-36 pb-24 sm:pt-44 sm:pb-32">
+        <Container className="grid gap-10 lg:grid-cols-[.65fr_1.35fr]">
+          <p className="text-xs font-bold uppercase tracking-[.24em] text-[#2f7d50]">Sobre mí · Santiago</p>
+          <div>
+            <h1 className="text-5xl font-extrabold leading-[.95] tracking-[-.065em] text-[#10261d] sm:text-7xl">Desarrollo con criterio, curiosidad y foco en procesos.</h1>
+            <p className="mt-8 max-w-3xl text-xl leading-9 text-[#52665c]">Soy Ingeniero en Informática titulado de INACAP. Me interesa entender cómo funciona un proceso, detectar dónde se pierde tiempo y construir una solución mantenible que conecte frontend, backend y datos.</p>
+          </div>
         </Container>
       </section>
 
-      <section className="border-t border-zinc-900 py-24">
+      <section className="bg-[#10261d] py-24 text-[#eef3ec] sm:py-32">
         <Container>
-          <div className="grid gap-12 lg:grid-cols-[0.75fr_1.25fr]">
+          <div className="grid gap-10 lg:grid-cols-[.65fr_1.35fr]">
+            <div><p className="text-xs font-bold uppercase tracking-[.24em] text-[#8fd09e]">Experiencia</p><h2 className="mt-4 text-4xl font-bold tracking-[-.05em] sm:text-5xl">Trayectoria profesional</h2></div>
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-400">
-                Trayectoria
-              </p>
-
-              <h2 className="mt-4 text-3xl font-semibold tracking-tight text-zinc-100 sm:text-4xl">
-                Experiencia profesional
-              </h2>
-
-              <p className="mt-5 max-w-md leading-7 text-zinc-400">
-                Una combinación de desarrollo de software, soporte técnico y
-                resolución de problemas.
-              </p>
-            </div>
-
-            <div className="space-y-6">
               {experience.map((item) => (
-                <article
-                  key={item.id}
-                  className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6"
-                >
-                  <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
-                    <div>
-                      <h3 className="text-xl font-semibold text-zinc-100">
-                        {item.role}
-                      </h3>
-
-                      <p className="mt-1 text-zinc-400">{item.company}</p>
-                    </div>
-
-                    <span className="text-sm text-zinc-500">
-                      {item.period}
-                    </span>
-                  </div>
-
-                  <p className="mt-5 leading-7 text-zinc-400">
-                    {item.description}
-                  </p>
-
-                  <div className="mt-6 flex flex-wrap gap-2">
-                    {item.technologies.map((technology) => (
-                      <span
-                        key={technology}
-                        className="rounded-full border border-zinc-800 bg-zinc-950 px-3 py-1 text-xs text-zinc-300"
-                      >
-                        {technology}
-                      </span>
-                    ))}
-                  </div>
+                <article key={item.id} className="border-t border-white/15 pt-8">
+                  <div className="flex flex-col gap-3 sm:flex-row sm:justify-between"><div><h3 className="text-2xl font-bold">{item.role}</h3><p className="mt-1 text-[#8fd09e]">{item.company}</p></div><p className="text-sm text-[#9fb0a7]">{item.period}</p></div>
+                  <p className="mt-6 max-w-3xl leading-7 text-[#c1cec7]">{item.description}</p>
+                  <ul className="mt-7 grid gap-3 text-sm leading-6 text-[#d5ded8] sm:grid-cols-2">{item.achievements.map((achievement) => <li key={achievement} className="flex gap-3"><span className="text-[#8fd09e]">●</span>{achievement}</li>)}</ul>
+                  <div className="mt-8 flex flex-wrap gap-2">{item.technologies.map((technology) => <span key={technology} className="rounded-full border border-white/15 px-3 py-1.5 text-xs text-[#c7d4cd]">{technology}</span>)}</div>
                 </article>
               ))}
             </div>
@@ -106,40 +34,12 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="border-t border-zinc-900 py-24">
+      <section className="bg-[#e7eee3] py-24 sm:py-32">
         <Container>
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-400">
-              Conocimientos
-            </p>
-
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-zinc-100 sm:text-4xl">
-              Tecnologías y herramientas
-            </h2>
-          </div>
-
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {skillGroups.map((group) => (
-              <article
-                key={group.id}
-                className="rounded-2xl border border-zinc-800 bg-zinc-900/30 p-6"
-              >
-                <h3 className="text-lg font-semibold text-zinc-100">
-                  {group.title}
-                </h3>
-
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {group.skills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="rounded-full bg-zinc-800 px-3 py-1.5 text-sm text-zinc-300"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </article>
-            ))}
+          <p className="text-xs font-bold uppercase tracking-[.24em] text-[#2f7d50]">Herramientas</p>
+          <h2 className="mt-4 max-w-3xl text-4xl font-bold tracking-[-.05em] text-[#10261d] sm:text-6xl">Lo que uso para construir.</h2>
+          <div className="mt-14 grid gap-px overflow-hidden rounded-3xl border border-[#183126]/15 bg-[#183126]/15 md:grid-cols-2">
+            {skillGroups.map((group) => <article key={group.id} className="bg-[#f4f1e8] p-7 sm:p-9"><p className="text-xs font-bold uppercase tracking-[.18em] text-[#568269]">{group.label}</p><h3 className="mt-3 text-2xl font-bold tracking-[-.035em]">{group.title}</h3><p className="mt-5 leading-8 text-[#52665c]">{group.skills.join(" · ")}</p></article>)}
           </div>
         </Container>
       </section>

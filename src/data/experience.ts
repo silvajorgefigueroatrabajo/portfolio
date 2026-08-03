@@ -4,38 +4,33 @@ export interface ExperienceItem {
   company: string;
   period: string;
   description: string;
+  achievements: string[];
   technologies: string[];
 }
 
 const experience: ExperienceItem[] = [
   {
     id: 1,
-    role: "Soporte TI",
-    company: "Abastible · Planta Maipú",
-    period: "Actualidad",
+    role: "Ingeniero de Desarrollo",
+    company: "2080 Servicios",
+    period: "Ene 2025 — May 2026",
     description:
-      "Soporte a usuarios, resolución de incidencias técnicas, mantenimiento de equipos y apoyo en la continuidad operativa de los sistemas tecnológicos.",
-    technologies: [
-      "Windows",
-      "Microsoft 365",
-      "Redes",
-      "Hardware",
-      "Soporte a usuarios",
+      "Desarrollo y mantenimiento de plataformas empresariales orientadas a la automatización de procesos, incluyendo soluciones para Telefónica.",
+    achievements: [
+      "Implementación full stack de vistas, formularios, mantenedores y operaciones CRUD.",
+      "Desarrollo de APIs REST, integraciones externas, jobs, queues, comandos y scripts.",
+      "Procesamiento y validación de archivos Excel e integración con flujos de automatización RPA.",
+      "Debugging y colaboración mediante ramas y Pull Requests con equipos de desarrollo y QA.",
     ],
-  },
-  {
-    id: 2,
-    role: "Desarrollador Full Stack",
-    company: "Experiencia previa",
-    period: "Anterior",
-    description:
-      "Desarrollo y mantenimiento de aplicaciones web, implementación de funcionalidades y trabajo con bases de datos relacionales.",
     technologies: [
-      "Laravel 5.6",
       "PHP",
-      "SQL",
-      "JavaScript",
-      "Bootstrap",
+      "Laravel 5.6",
+      "Vue.js 2",
+      "Blade",
+      "MySQL",
+      "Docker",
+      "Git",
+      "Bitbucket",
     ],
   },
 ];
