@@ -1,29 +1,23 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Code2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import type { Project } from "@/types/project";
 
-export default function ProjectCard({ project, index = 0 }: { project: Project; index?: number }) {
+export default function ProjectCard({ project }: { project: Project; index?: number }) {
   return (
-    <article className="group grid gap-7 border-t border-[#183126]/20 py-9 sm:grid-cols-[90px_1fr_auto] sm:items-start">
-      <span className="display text-sm font-bold text-[#6f8278]">0{index + 1}</span>
-      <div>
-        {project.image && (
-          <div className="mb-7 overflow-hidden rounded-2xl border border-[#183126]/10 bg-[#10261d]">
-            <img src={project.image} alt={`Vista de ${project.title}`} className="aspect-[16/8] w-full object-cover object-top transition duration-500 group-hover:scale-[1.015]" />
-          </div>
-        )}
-        <p className="text-xs font-bold uppercase tracking-[.2em] text-[#2f7d50]">{project.category}</p>
-        <h3 className="mt-3 text-3xl font-bold tracking-[-.045em] text-[#10261d] sm:text-4xl">{project.title}</h3>
-        <p className="mt-4 max-w-2xl leading-7 text-[#52665c]">{project.description}</p>
-        <ul className="mt-5 grid gap-2 text-sm text-[#314b3e] sm:grid-cols-3">
-          {project.highlights.map((item) => <li key={item} className="flex gap-2"><span className="text-[#2f7d50]">↳</span>{item}</li>)}
-        </ul>
-        <ul className="mt-6 flex flex-wrap gap-2">
-          {project.technologies.map((technology) => <li key={technology} className="rounded-full bg-[#dfe8dc] px-3 py-1.5 text-xs font-semibold text-[#315942]">{technology}</li>)}
-        </ul>
-        {project.caseStudyUrl && <Link to={project.caseStudyUrl} className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-[#246b45] hover:gap-3">Ver caso de estudio <ArrowUpRight size={17} /></Link>}
+    <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/40 transition duration-300 hover:-translate-y-1 hover:border-emerald-500/40 hover:bg-zinc-900/70">
+      {project.image && <div className="aspect-[16/9] overflow-hidden border-b border-zinc-800 bg-zinc-900"><img src={project.image} alt={`Vista de ${project.title}`} className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-[1.025]" /></div>}
+      <div className="flex flex-1 flex-col p-6">
+        <div className="flex items-start justify-between gap-4">
+          <div><p className="text-xs font-semibold uppercase tracking-[.18em] text-emerald-400">{project.category}</p><h3 className="mt-2 text-xl font-semibold text-zinc-100">{project.title}</h3></div>
+          <a href={project.repositoryUrl} target="_blank" rel="noreferrer" aria-label={`Ver repositorio de ${project.title}`} className="text-zinc-500 transition hover:text-emerald-400"><Code2 size={20} /></a>
+        </div>
+        <p className="mt-4 flex-1 leading-7 text-zinc-400">{project.description}</p>
+        <ul className="mt-6 flex flex-wrap gap-2">{project.technologies.map((technology) => <li key={technology} className="rounded-full border border-zinc-800 px-3 py-1 text-xs text-zinc-400">{technology}</li>)}</ul>
+        <div className="mt-6 flex flex-wrap gap-5">
+          {project.caseStudyUrl && <Link to={project.caseStudyUrl} className="inline-flex items-center gap-2 text-sm font-medium text-emerald-400 transition hover:text-emerald-300">Ver caso de estudio <ArrowUpRight size={16} /></Link>}
+          {project.liveUrl && <a href={project.liveUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm font-medium text-emerald-400 transition hover:text-emerald-300">Ver proyecto <ArrowUpRight size={16} /></a>}
+        </div>
       </div>
-      <a href={project.repositoryUrl} target="_blank" rel="noreferrer" aria-label={`Ver perfil de GitHub asociado a ${project.title}`} className="flex h-12 w-12 items-center justify-center rounded-full border border-[#183126]/20 transition group-hover:border-[#2f7d50] group-hover:bg-[#2f7d50] group-hover:text-white"><ArrowUpRight size={20} /></a>
     </article>
   );
 }

@@ -1,23 +1,29 @@
+import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+
 import Container from "@/components/ui/Container";
 import ProjectCard from "@/components/ui/ProjectCard";
 import projects from "@/data/projects";
 
 export default function FeaturedProjects() {
-  const featured = projects.filter((project) => project.featured);
+  const featuredProjects = projects.filter((project) => project.featured);
+
   return (
-    <section id="projects" className="bg-[#fffdf6] py-24 sm:py-32">
+    <section id="projects" className="border-t border-zinc-900 py-24 sm:py-32">
       <Container>
-        <div className="grid gap-8 lg:grid-cols-[.7fr_1.3fr] lg:items-end">
-          <p className="text-xs font-bold uppercase tracking-[.24em] text-[#2f7d50]">Trabajo seleccionado · 2026</p>
+        <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <h2 className="text-4xl font-bold tracking-[-.055em] text-[#10261d] sm:text-6xl">Sistemas pensados para el trabajo real.</h2>
-            <p className="mt-5 max-w-2xl leading-7 text-[#5a6e63]">Proyectos orientados a organizar información, dar trazabilidad a procesos y reducir trabajo manual.</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-400">Trabajo seleccionado</p>
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-zinc-100 sm:text-5xl">Proyectos destacados</h2>
+            <p className="mt-5 max-w-2xl leading-7 text-zinc-400">Proyectos enfocados en automatizar tareas, organizar información y resolver necesidades reales mediante software.</p>
           </div>
+          <Link to="/projects" className="inline-flex items-center gap-2 text-sm font-medium text-zinc-300 transition hover:text-emerald-400">Ver todos <ArrowRight size={16} /></Link>
         </div>
-        <div className="mt-16">{featured.map((project, index) => <ProjectCard key={project.id} project={project} index={index} />)}</div>
-        <Link to="/projects" className="mt-8 inline-flex items-center gap-2 font-bold text-[#246b45] hover:gap-3">Ver todos los proyectos <ArrowRight size={18} /></Link>
+
+        <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.6 }} className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {featuredProjects.map((project) => <ProjectCard key={project.id} project={project} />)}
+        </motion.div>
       </Container>
     </section>
   );

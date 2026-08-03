@@ -6,17 +6,17 @@ import skillGroups from "@/data/skills";
 export default function AboutPage() {
   return (
     <MainLayout>
-      <section className="paper-grid pt-36 pb-24 sm:pt-44 sm:pb-32">
+      <section className="pt-36 pb-24 sm:pt-44 sm:pb-32">
         <Container className="grid gap-10 lg:grid-cols-[.65fr_1.35fr]">
-          <p className="text-xs font-bold uppercase tracking-[.24em] text-[#2f7d50]">Sobre mí · Santiago</p>
+          <p className="text-xs font-bold uppercase tracking-[.24em] text-emerald-400">Sobre mí · Santiago</p>
           <div>
-            <h1 className="text-5xl font-extrabold leading-[.95] tracking-[-.065em] text-[#10261d] sm:text-7xl">Desarrollo con criterio, curiosidad y foco en procesos.</h1>
-            <p className="mt-8 max-w-3xl text-xl leading-9 text-[#52665c]">Soy Ingeniero en Informática titulado de INACAP. Me interesa entender cómo funciona un proceso, detectar dónde se pierde tiempo y construir una solución mantenible que conecte frontend, backend y datos.</p>
+            <h1 className="text-5xl font-extrabold leading-[.95] tracking-[-.065em] text-zinc-100 sm:text-7xl">Desarrollo con criterio, curiosidad y foco en procesos.</h1>
+            <p className="mt-8 max-w-3xl text-xl leading-9 text-zinc-400">Soy Ingeniero en Informática titulado de INACAP. Me interesa entender cómo funciona un proceso, detectar dónde se pierde tiempo y construir una solución mantenible que conecte frontend, backend y datos.</p>
           </div>
         </Container>
       </section>
 
-      <section className="bg-[#10261d] py-24 text-[#eef3ec] sm:py-32">
+      <section className="border-y border-zinc-800 bg-zinc-900/60 py-24 text-zinc-100 sm:py-32">
         <Container>
           <div className="grid gap-10 lg:grid-cols-[.65fr_1.35fr]">
             <div><p className="text-xs font-bold uppercase tracking-[.24em] text-[#8fd09e]">Experiencia</p><h2 className="mt-4 text-4xl font-bold tracking-[-.05em] sm:text-5xl">Trayectoria profesional</h2></div>
@@ -34,12 +34,12 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="bg-[#e7eee3] py-24 sm:py-32">
+      <section className="bg-zinc-950 py-24 sm:py-32">
         <Container>
-          <p className="text-xs font-bold uppercase tracking-[.24em] text-[#2f7d50]">Herramientas</p>
-          <h2 className="mt-4 max-w-3xl text-4xl font-bold tracking-[-.05em] text-[#10261d] sm:text-6xl">Lo que uso para construir.</h2>
-          <div className="mt-14 grid gap-px overflow-hidden rounded-3xl border border-[#183126]/15 bg-[#183126]/15 md:grid-cols-2">
-            {skillGroups.map((group) => <article key={group.id} className="bg-[#f4f1e8] p-7 sm:p-9"><p className="text-xs font-bold uppercase tracking-[.18em] text-[#568269]">{group.label}</p><h3 className="mt-3 text-2xl font-bold tracking-[-.035em]">{group.title}</h3><p className="mt-5 leading-8 text-[#52665c]">{group.skills.join(" · ")}</p></article>)}
+          <p className="text-xs font-bold uppercase tracking-[.24em] text-emerald-400">Herramientas</p>
+          <h2 className="mt-4 max-w-3xl text-4xl font-bold tracking-[-.05em] text-zinc-100 sm:text-6xl">Lo que uso para construir.</h2>
+          <div className="mt-14 grid gap-px overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-800 md:grid-cols-2">
+            {skillGroups.map((group) => <article key={group.id} className="bg-zinc-900 p-7 sm:p-9"><p className="text-xs font-bold uppercase tracking-[.18em] text-emerald-400">{group.label}</p><h3 className="mt-3 text-2xl font-bold tracking-[-.035em] text-zinc-100">{group.title}</h3><p className="mt-5 leading-8 text-zinc-400">{group.skills.join(" · ")}</p></article>)}
           </div>
         </Container>
       </section>
