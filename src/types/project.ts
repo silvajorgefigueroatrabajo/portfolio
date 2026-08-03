@@ -7,5 +7,7 @@ export interface Project {
   technologies: string[];
   repositoryUrl: string;
   liveUrl?: string;
+  caseStudyUrl?: string;
+  image?: string;
   featured: boolean;
 }

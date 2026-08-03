@@ -16,13 +16,15 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    title: "Sistema de Soporte TI",
-    category: "Flujo de incidencias",
+    title: "Nexo Soporte",
+    category: "Producto full stack · Caso de estudio",
     description:
-      "Solución para registrar, organizar y dar seguimiento a solicitudes técnicas desde su ingreso hasta su resolución.",
-    highlights: ["Gestión de tickets", "Seguimiento de estados", "Historial de incidencias"],
-    technologies: ["Laravel", "SQL Server", "Bootstrap"],
-    repositoryUrl: github,
+      "Plataforma operativa para registrar incidencias, analizar tiempos de resolución y centralizar conocimiento con roles, métricas y trazabilidad.",
+    highlights: ["140 casos demo sintéticos", "Dashboard y explorador de datos", "Roles, guías y exportación Excel"],
+    technologies: ["Laravel 13", "React", "TypeScript", "Inertia", "PostgreSQL", "Docker"],
+    repositoryUrl: "https://github.com/silvajorgefigueroatrabajo/soporte-ti-demo",
+    caseStudyUrl: "/projects/nexo-soporte",
+    image: "/nexo-dashboard.png",
     featured: true,
   },
   {
