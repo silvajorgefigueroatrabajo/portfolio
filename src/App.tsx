@@ -12,7 +12,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/projects" element={<ProjectsPage />} />
-      <Route path="/projects/nexo-soporte" element={<NexoSupportPage />} />
+      <Route path="/projects/sistema-soporte-ti" element={<NexoSupportPage />} />
       <Route path="/about" element={<AboutPage />} />
       <Route path="/contact" element={<ContactPage />} />
       <Route path="*" element={<NotFoundPage />} />
