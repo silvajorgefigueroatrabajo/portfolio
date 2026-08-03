@@ -26,7 +26,7 @@ const skillGroups: SkillGroup[] = [
   },
   {
     id: 4,
-    title: "Proyectos personales",
+    title: "Proyecto personal",
     label: "Aprendizaje continuo",
     skills: ["React", "Tailwind CSS", "Vite", "GitHub", "SQL Server", "HTML", "CSS"],
   },
