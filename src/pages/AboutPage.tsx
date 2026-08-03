@@ -8,7 +8,7 @@ export default function AboutPage() {
     <MainLayout>
       <section className="pt-36 pb-24 sm:pt-44 sm:pb-32">
         <Container className="grid gap-10 lg:grid-cols-[.65fr_1.35fr]">
-          <p className="text-xs font-bold uppercase tracking-[.24em] text-emerald-400">Sobre mí · Santiago</p>
+          <p className="text-xs font-bold uppercase tracking-[.24em] text-emerald-400">Sobre mí</p>
           <div>
             <h1 className="text-5xl font-extrabold leading-[.95] tracking-[-.065em] text-zinc-100 sm:text-7xl">Desarrollo con criterio, curiosidad y foco en procesos.</h1>
             <p className="mt-8 max-w-3xl text-xl leading-9 text-zinc-400">Soy Ingeniero en Informática titulado de INACAP. Me interesa entender cómo funciona un proceso, detectar dónde se pierde tiempo y construir una solución mantenible que conecte frontend, backend y datos.</p>
