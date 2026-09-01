@@ -8,27 +8,27 @@ export interface SkillGroup {
 const skillGroups: SkillGroup[] = [
   {
     id: 1,
-    title: "Desarrollo profesional",
-    label: "Experiencia aplicada",
-    skills: ["PHP", "Laravel 5.6", "Vue.js 2", "Blade", "JavaScript", "TypeScript"],
+    title: "Business Intelligence",
+    label: "Datos y reportería",
+    skills: ["Power BI", "Power Query", "DAX", "Modelado de datos", "KPIs", "SharePoint", "Excel avanzado"],
   },
   {
     id: 2,
-    title: "Backend y automatización",
-    label: "Procesos e integraciones",
-    skills: ["APIs REST", "MySQL", "Jobs", "Queues", "Docker", "RPA", "Python básico"],
+    title: "Desarrollo full stack",
+    label: "Software empresarial",
+    skills: ["PHP", "Laravel", "Vue.js", "React", "TypeScript", "Blade", "APIs REST"],
   },
   {
     id: 3,
-    title: "Flujo de trabajo",
-    label: "Colaboración técnica",
-    skills: ["Git", "Bitbucket", "Pull Requests", "DBeaver", "ClickUp", "Agile", "Scrum"],
+    title: "Datos y automatización",
+    label: "Procesos e integraciones",
+    skills: ["MySQL", "SQL", "Jobs", "Queues", "Docker", "RPA", "Python", "Procesamiento de datos"],
   },
   {
     id: 4,
-    title: "Proyecto personal",
-    label: "Aprendizaje continuo",
-    skills: ["React", "Tailwind CSS", "Vite", "GitHub", "SQL Server", "HTML", "CSS"],
+    title: "Herramientas de trabajo",
+    label: "Colaboración técnica",
+    skills: ["Git", "Bitbucket", "GitHub", "DBeaver", "ClickUp", "SAP", "Agile", "Scrum"],
   },
 ];
 

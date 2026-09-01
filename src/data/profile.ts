@@ -1,9 +1,9 @@
 const profile = {
   name: "Jorge Silva",
   role: "Ingeniero en Informática",
-  title: "Desarrollador Full Stack Junior",
+  title: "Desarrollo de software · Datos · Automatización",
   description:
-    "Tengo 1 año y 5 meses de experiencia desarrollando y manteniendo aplicaciones empresariales. Trabajo con Laravel, Vue.js, MySQL y Docker para convertir procesos complejos en soluciones claras y útiles.",
+    "Combino experiencia en desarrollo full stack con soporte TI y Business Intelligence. Construyo soluciones, automatizaciones y dashboards que convierten procesos y datos operacionales en información útil.",
 };
 
 export default profile;

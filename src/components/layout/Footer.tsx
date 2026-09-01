@@ -10,7 +10,7 @@ export default function Footer() {
           <div>
             <p className="text-xs font-bold uppercase tracking-[.24em] text-[#8fd09e]">Disponible para nuevas oportunidades</p>
             <h2 className="mt-5 max-w-2xl text-3xl font-bold tracking-[-.04em] sm:text-5xl">Construyamos algo útil.</h2>
-            <p className="mt-5 max-w-xl leading-7 text-[#b8c5be]">Desarrollo software con foco en procesos, datos y experiencias que realmente facilitan el trabajo.</p>
+            <p className="mt-5 max-w-xl leading-7 text-[#b8c5be]">Conecto software, datos y operación para construir soluciones que realmente facilitan el trabajo.</p>
           </div>
           <div className="flex gap-3 md:justify-end">
             <a href={`mailto:${contact.email}`} aria-label="Enviar correo" className="rounded-full border border-white/15 p-3 transition hover:border-[#8fd09e] hover:text-[#8fd09e]"><Mail size={19} /></a>

@@ -12,7 +12,7 @@ export default function ContactPage() {
             <div>
               <p className="text-xs font-bold uppercase tracking-[.24em] text-emerald-400">Contacto</p>
               <h1 className="mt-6 max-w-4xl text-5xl font-extrabold leading-[.93] tracking-[-.07em] text-zinc-100 sm:text-7xl lg:text-8xl">¿Tienes un desafío que podamos resolver?</h1>
-              <p className="mt-8 max-w-2xl text-lg leading-8 text-zinc-400">Estoy disponible para oportunidades como desarrollador, colaboraciones y proyectos relacionados con aplicaciones web, datos y automatización de procesos.</p>
+              <p className="mt-8 max-w-2xl text-lg leading-8 text-zinc-400">Estoy abierto a oportunidades y colaboraciones relacionadas con desarrollo de software, Business Intelligence, análisis de datos y automatización de procesos.</p>
             </div>
             <aside className="rounded-[2rem] border border-zinc-800 bg-zinc-900 p-7 text-zinc-100 sm:p-9">
               <p className="text-sm leading-7 text-[#b8c5be]">La forma más directa de contactarme es por correo. Cuéntame brevemente sobre la oportunidad o el proyecto y te responderé apenas pueda.</p>

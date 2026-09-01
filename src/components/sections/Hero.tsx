@@ -13,10 +13,10 @@ export default function Hero() {
 
       <Container className="relative">
         <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: "easeOut" }} className="max-w-4xl">
-          <span className="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-400">{profile.role}</span>
+          <span className="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-400">{profile.role} · {profile.title}</span>
           <h1 className="mt-6 text-5xl font-bold tracking-tight text-zinc-50 sm:text-6xl lg:text-7xl">{profile.name}</h1>
           <h2 className="mt-6 max-w-3xl text-2xl leading-tight text-zinc-300 sm:text-4xl">
-            Desarrollo software para resolver problemas reales <span className="text-zinc-500">y mejorar procesos.</span>
+            Software y datos para entender operaciones <span className="text-zinc-500">y mejorar procesos.</span>
           </h2>
           <p className="mt-8 max-w-2xl text-lg leading-8 text-zinc-400">{profile.description}</p>
           <div className="mt-12 flex flex-wrap gap-4">
