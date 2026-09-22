@@ -1,8 +1,9 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import Container from "@/components/ui/Container";
+import contact from "@/config/contact";
 import profile from "@/data/profile";
 
 export default function Hero() {
@@ -22,6 +23,7 @@ export default function Hero() {
           <div className="mt-12 flex flex-wrap gap-4">
             <Link to="/projects" className="inline-flex items-center gap-2 rounded-full bg-emerald-400 px-6 py-3 text-sm font-semibold text-zinc-950 transition hover:bg-emerald-300">Ver proyectos <ArrowRight size={18} /></Link>
             <Link to="/about" className="inline-flex items-center gap-2 rounded-full border border-zinc-700 px-6 py-3 text-sm font-medium text-zinc-300 transition hover:border-emerald-400/60 hover:bg-zinc-900 hover:text-white">Sobre mí</Link>
+            <a href={contact.cv} download className="inline-flex items-center gap-2 rounded-full border border-zinc-700 px-6 py-3 text-sm font-medium text-zinc-300 transition hover:border-emerald-400/60 hover:bg-zinc-900 hover:text-white">Descargar CV <Download size={17} /></a>
           </div>
         </motion.div>
       </Container>

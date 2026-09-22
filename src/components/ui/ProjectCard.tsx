@@ -12,6 +12,9 @@ export default function ProjectCard({ project }: { project: Project; index?: num
           <a href={project.repositoryUrl} target="_blank" rel="noreferrer" aria-label={`Ver repositorio de ${project.title}`} className="text-zinc-500 transition hover:text-emerald-400"><Code2 size={20} /></a>
         </div>
         <p className="mt-4 flex-1 leading-7 text-zinc-400">{project.description}</p>
+        <ul className="mt-5 grid gap-2 text-sm text-zinc-300 sm:grid-cols-3">
+          {project.highlights.map((highlight) => <li key={highlight} className="flex gap-2"><span className="text-emerald-400">●</span>{highlight}</li>)}
+        </ul>
         <ul className="mt-6 flex flex-wrap gap-2">{project.technologies.map((technology) => <li key={technology} className="rounded-full border border-zinc-800 px-3 py-1 text-xs text-zinc-400">{technology}</li>)}</ul>
         <div className="mt-6 flex flex-wrap gap-5">
           {project.caseStudyUrl && <Link to={project.caseStudyUrl} className="inline-flex items-center gap-2 text-sm font-medium text-emerald-400 transition hover:text-emerald-300">Ver caso de estudio <ArrowUpRight size={16} /></Link>}

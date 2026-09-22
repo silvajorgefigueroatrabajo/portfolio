@@ -26,3 +26,7 @@ dist-ssr
 .env
 .env.local
 .env.*.local
+
+# Temporary review and generated artifact files
+tmp/
+.codex-cv-render/

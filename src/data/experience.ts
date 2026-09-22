@@ -15,14 +15,15 @@ const experience: ExperienceItem[] = [
     company: "Abastible",
     period: "Jul 2026 — Actualidad",
     description:
-      "Soporte tecnológico y continuidad operativa, combinados con análisis de datos y automatización de reportería para las áreas usuarias.",
+      "Soporte tecnológico y continuidad operativa, combinados con análisis de datos, automatización y desarrollo de soluciones internas para las áreas usuarias.",
     achievements: [
-      "Soporte a usuarios, manejo de SAP y resolución de incidencias en la aplicación VTGR.",
       "Desarrollo de dashboards interactivos en Power BI para reportería operacional.",
       "Integración de SharePoint y archivos Excel mediante procesos de transformación en Power Query.",
-      "Construcción de modelos de datos, medidas DAX e indicadores para apoyar decisiones operacionales.",
+      "Limpieza y modelado de datos, medidas DAX e indicadores KPI para apoyar decisiones operacionales.",
+      "Automatización de reportes y desarrollo de herramientas para centralizar información y reducir trabajo manual.",
+      "Soporte a usuarios, manejo de SAP y resolución de incidencias en la aplicación VTGR.",
     ],
-    technologies: ["Power BI", "Power Query", "DAX", "SAP", "SharePoint", "Excel"],
+    technologies: ["Power BI", "Power Query", "DAX", "SAP", "SharePoint", "Excel", "SQL"],
   },
   {
     id: 2,

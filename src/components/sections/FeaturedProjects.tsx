@@ -16,7 +16,7 @@ export default function FeaturedProjects() {
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-400">Trabajo seleccionado</p>
             <h2 className="mt-4 text-3xl font-semibold tracking-tight text-zinc-100 sm:text-5xl">Proyecto destacado</h2>
-            <p className="mt-5 max-w-2xl leading-7 text-zinc-400">Una solución creada para organizar atenciones de soporte, centralizar información y reducir trabajo manual.</p>
+            <p className="mt-5 max-w-2xl leading-7 text-zinc-400">Una solución que conecta soporte, mensajería y datos operacionales para centralizar información y reducir trabajo manual.</p>
           </div>
           <Link to="/projects" className="inline-flex items-center gap-2 text-sm font-medium text-zinc-300 transition hover:text-emerald-400">Ver todos <ArrowRight size={16} /></Link>
         </div>
