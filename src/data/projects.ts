@@ -15,7 +15,7 @@ const projects: Project[] = [
     technologies: ["Laravel 13", "React", "TypeScript", "Inertia", "PostgreSQL", "Docker"],
     repositoryUrl: "https://github.com/silvajorgefigueroatrabajo/soporte-ti-demo",
     caseStudyUrl: "/projects/sistema-soporte-ti",
-    image: "/soporte-ti-dashboard.png",
+    image: "/support-overview-demo.svg",
     featured: true,
   },
 ];
